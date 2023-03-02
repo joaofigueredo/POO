@@ -10,13 +10,20 @@ class Poo
         int valor1 = int.Parse(Console.ReadLine());
         int valor2 = int.Parse(Console.ReadLine());
         //int mult = Mult(valor1, valor2);
-        Console.WriteLine(Mult(valor1, valor2));
+
+        DobrarValor(ref valor1);
+        Console.WriteLine(valor1);
 
     }
 
-    static void Ola(string nome, string dia)
+    static void Ola(string nome, string dia)//metodo sem retorno
     {
         Console.WriteLine($"Ola {nome}, hoje é {dia}!");
+    }
+
+    static void DobrarValor(ref int valor)
+    {
+        valor *= 2;
     }
 
     static void Soma(int n1, int n2) 
@@ -25,7 +32,7 @@ class Poo
         Console.WriteLine($"{n1} + {n2} = {res}"); 
     }
 
-    static int Mult(int n1, int n2)
+    static int Mult(int n1, int n2) //metodo com retorno int
     {
         return n1 * n2;
     }
